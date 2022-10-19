@@ -95,7 +95,7 @@
 #define	DWINLCD_MENU_VERSION			3		//Used DWIN LCD MENU V3
 #define	OPTION_AUTOPOWEROFF					//Power off after printer
 #define	OPTION_DUALZ_DRIVE  				//Dual Z driver motor(connect to Z2 motor connector)
-#define OPTION_Z2_ENDSTOP						//Dual Z driver motor(connect to Z2- connector)
+//#define OPTION_Z2_ENDSTOP						//Dual Z driver motor(connect to Z2- connector)
 #define	OPTION_PL08N 			    			//Probe use PL_08N
 #define	OPTION_HOMEZ_OFFSET						//Home Z offset
 #define	OPTION_HOTENDMAXTEMP				//set the max hotend temperature
@@ -730,7 +730,7 @@
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
 #define USE_XMIN_PLUG
 #define USE_YMIN_PLUG
-#define USE_ZMIN_PLUG
+//#define USE_ZMIN_PLUG
 //#define USE_XMAX_PLUG
 //#define USE_YMAX_PLUG
 //#define USE_ZMAX_PLUG
@@ -955,7 +955,7 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
 //#define USE_PROBE_FOR_Z_HOMING
@@ -1214,8 +1214,8 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR true
-#define INVERT_Y_DIR true
+#define INVERT_X_DIR false
+#define INVERT_Y_DIR false
 #define INVERT_Z_DIR false
 #define	EXTRUDER_DIR (false ^ ENABLED(OPTION_BGM) ^ ENABLED(OPTION_TMC2225_EXTRUDER) ^ ENABLED(OPTION_TMC2209_ALL_MOTOR))
 
@@ -1252,12 +1252,13 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 310
-#define Y_BED_SIZE 310
+#define X_BED_SIZE 400
+#define Y_BED_SIZE 400
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
+#define X_MIN_POS -10
 #define Y_MIN_POS 0
+
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
