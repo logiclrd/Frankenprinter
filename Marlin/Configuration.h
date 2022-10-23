@@ -91,7 +91,7 @@
 //===========================================================================
 //default feature, usually keep it enable
 #define	SWITCH_EXTRUDER_SQUENCY
-#define	OPTION_FLOWRATE_MENU					//Add a flowrate menu on LCD MENU
+//#define	OPTION_FLOWRATE_MENU					//Add a flowrate menu on LCD MENU
 #define	DWINLCD_MENU_VERSION			3		//Used DWIN LCD MENU V3
 #define	OPTION_AUTOPOWEROFF					//Power off after printer
 #define	OPTION_DUALZ_DRIVE  				//Dual Z driver motor(connect to Z2 motor connector)
@@ -100,16 +100,16 @@
 #define	OPTION_HOMEZ_OFFSET						//Home Z offset
 #define	OPTION_HOTENDMAXTEMP				//set the max hotend temperature
 #define	OPTION_MIXING_SWITCH				//Enable/disable mixing feature on LCD MENU
-#define	OPTION_GUIDE_QRCODE         //Add a User Guide link QRcode on first power on
-#define	OPTION_NEWS_QRCODE					//Add a Update News QRcode on Info Menu
+//#define	OPTION_GUIDE_QRCODE         //Add a User Guide link QRcode on first power on
+//#define	OPTION_NEWS_QRCODE					//Add a Update News QRcode on Info Menu
 #define	SWITCH_EXTRUDER_MENU				//Switch Extruder Menu
 #define	DEFAULT_AUTO_LEVELING	true	//Auto leveling feature is on
 #define	DEFAULT_MIXING_SWITCH	true	//Default mixing feature is on
 //===========================================================================
 //optional feature
-#define	OPTION_WIFI_MODULE					//Option WiFi module(ESP 01s)
-#define	OPTION_WIFI_BAUDRATE				//Option WiFi baudrate
-#define	OPTION_WIFI_QRCODE					//Show a QRcode while WiFi is connected to help vist Web3D
+//#define	OPTION_WIFI_MODULE					//Option WiFi module(ESP 01s)
+//#define	OPTION_WIFI_BAUDRATE				//Option WiFi baudrate
+//#define	OPTION_WIFI_QRCODE					//Show a QRcode while WiFi is connected to help vist Web3D
 //#define	OPTION_BGM								//BGM extruder
 //#define	OPTION_TMC2225_EXTRUDER		//TMC2225 be used to extruder motors
 //#define	OPTION_TMC2209_ALL_MOTOR	//TMC2209 be used to all motor
@@ -201,7 +201,7 @@
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
 //#define	SHOW_MARLIN_BOOTSCREEN
-#define SHOW_CUSTOM_BOOTSCREEN
+//#define SHOW_CUSTOM_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Statusscreen.h on the status screen.
 #define CUSTOM_STATUS_SCREEN_IMAGE
@@ -711,10 +711,10 @@
 
 // Enable one of the options below for CoreXY, CoreXZ, or CoreYZ kinematics,
 // either in the usual order or reversed
-#define COREXY
+//#define COREXY
 //#define COREXZ
 //#define COREYZ
-//#define COREYX
+#define COREYX
 //#define COREZX
 //#define COREZY
 //#define MARKFORGED_XY  // MarkForged. See https://reprap.org/forum/read.php?152,504042
@@ -1214,7 +1214,7 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
+#define INVERT_X_DIR true
 #define INVERT_Y_DIR false
 #define INVERT_Z_DIR false
 #define	EXTRUDER_DIR (false ^ ENABLED(OPTION_BGM) ^ ENABLED(OPTION_TMC2225_EXTRUDER) ^ ENABLED(OPTION_TMC2209_ALL_MOTOR))
